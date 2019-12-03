@@ -24,7 +24,7 @@ public class User extends NumberRepository {
 		this.sc = sc;
 	}
 	
-	private int insertNumber() {
+	private int insert() {
 		return sc.nextInt();
 	}
 
@@ -32,7 +32,7 @@ public class User extends NumberRepository {
 	public Set<Integer> save() {
 		Set<Integer> set = new HashSet<>();
 		while (set.size() < REPOSITORYSIZE) {
-			set.add(insertNumber());
+			set.add(insert());
 		}
 		return set;
 	}

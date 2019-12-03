@@ -19,7 +19,7 @@ public class Computer extends NumberRepository {
 
 	private static final int NUMBER_RANGE = 9;
 
-	private int insertRandomNumber() {
+	private int insert() {
 		return (int) (Math.random() * NUMBER_RANGE);
 	}
 
@@ -27,7 +27,7 @@ public class Computer extends NumberRepository {
 	public Set<Integer> save() {
 		Set<Integer> set = new HashSet<>();
 		while (set.size() < REPOSITORYSIZE) {
-			set.add(insertRandomNumber());
+			set.add(insert()());
 		}
 		return set;
 	}
