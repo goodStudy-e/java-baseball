@@ -54,3 +54,13 @@
 <p>출처 : 우아한 테크 코스1기 - 프리코스 1주차 요구사항</p>
 
 
+<h2> 프로그래밍 정보</h2>
+
+
+  <ul>
+      <li>
+                  class : computer 
+              -> method : insertRandomNumber
+              -> method : numberSet(int number)  
+      </li>
+  </ul>
