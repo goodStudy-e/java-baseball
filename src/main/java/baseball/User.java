@@ -1,8 +1,6 @@
 package baseball;
 
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 /**
  *  @ClassName User
@@ -16,20 +14,11 @@ import java.util.Set;
  *  @EMAIL asqwklop12@gmail.com
  *
  */
-public class User {
+public class User extends NumberRepository{
 	
 	public int insertNumber(Scanner sc) {
 		System.out.println("숫자를  입력해주세요.");
 		return sc.nextInt();
 	}	
 	
-	
-	public Set<Integer> numbetSet(int number) {
-		Set<Integer> set = new HashSet<>();
-		
-		while (set.size() < 3) {
-			set.add(number);
-		}
-		return set;
-	}
 }
