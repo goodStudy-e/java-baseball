@@ -63,4 +63,10 @@
               -> method : insertRandomNumber
               -> method : numberSet(int number)  
       </li>
+      <li>
+                  class : User 
+              -> method : insertNumber
+              -> method : numberSet(int number)  
+      </li>
+      
   </ul>
