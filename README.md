@@ -62,7 +62,9 @@
                   class : NumberRepository 
            -> abstract 
                  method : insert
-               , method : save     
+               , method : save 
+               , mehtod : range
+               , method : rangeTrue    
      </li>
       <li>
                   class : Computer extends NumberRepository

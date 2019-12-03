@@ -30,16 +30,25 @@ public abstract class NumberRepository {
 	// 숫자 입력
 	protected abstract int insert();
 
+	
+	// 범위가 맞으면 실행
+	private void rangeTrue(Set<Integer> set, int num) {
+		if (range(num)) {
+			set.add(num);
+		}
+	}
+	
+	
 	// 숫자 저장
 	public Set<Integer> save() {
 		Set<Integer> set = new HashSet<>();
 		while (set.size() < REPOSITORYSIZE) {
 			int num = insert();
-			if (range(num)) {
-				set.add(num);
-			}
+			rangeTrue(set, num);
 		}
 		return set;
 	}
+
+	
 
 }
