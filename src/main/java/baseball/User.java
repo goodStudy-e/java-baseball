@@ -18,25 +18,33 @@ import java.util.Set;
  */
 public class User extends NumberRepository {
 
+	private static int MIN = -1;
+	private static int MAX = 10;
 	private Scanner sc;
-	
+
 	public User(Scanner sc) {
 		this.sc = sc;
 	}
-	
+
 	private int insert() {
 		return sc.nextInt();
+	}
+
+	// 범위 지정
+	private boolean range(int num) {
+		return MIN < num && num < MAX;
 	}
 
 	@Override
 	public Set<Integer> save() {
 		Set<Integer> set = new HashSet<>();
 		while (set.size() < REPOSITORYSIZE) {
-			set.add(insert());
+			int num = insert();
+			if (range(num)) {
+				set.add(num);
+			}
 		}
 		return set;
 	}
-	
-	
 
 }
