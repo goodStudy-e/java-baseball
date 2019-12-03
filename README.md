@@ -64,11 +64,11 @@
      </li>
       <li>
                   class : computer extends NumberRepository
-              -> method : insertRandomNumber
+              -> method : insert
       </li>
       <li>
                   class : User extends NumberRepository
-              -> method : insertNumber
+              -> method : insert
       </li>
       
   </ul>
