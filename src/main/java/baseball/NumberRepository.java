@@ -1,6 +1,5 @@
 package baseball;
 
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -16,14 +15,11 @@ import java.util.Set;
  *
  */
 
-public class NumberRepository {
+public interface NumberRepository {
 
-	protected static final int REPOSITORYSIZE = 3;
+	static final int REPOSITORYSIZE = 3;
 	
-	
-	public Set<Integer> save() {
-		Set<Integer> set = new HashSet<>();
-		return set;
-	}
+	public int insert();
+	public Set<Integer> save(); 
 	
 }

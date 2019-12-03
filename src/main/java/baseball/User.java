@@ -16,7 +16,7 @@ import java.util.Set;
  * @EMAIL asqwklop12@gmail.com
  *
  */
-public class User extends NumberRepository {
+public class User implements NumberRepository {
 
 	private static int MIN = -1;
 	private static int MAX = 10;
@@ -26,7 +26,7 @@ public class User extends NumberRepository {
 		this.sc = sc;
 	}
 
-	private int insert() {
+	public int insert() {
 		return sc.nextInt();
 	}
 

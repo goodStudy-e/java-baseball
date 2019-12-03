@@ -15,11 +15,11 @@ import java.util.Set;
  * @EMAIL asqwklop12@gmail.com
  *
  */
-public class Computer extends NumberRepository {
+public class Computer implements NumberRepository {
 
 	private static final int NUMBER_RANGE = 9;
 
-	private int insert() {
+	public int insert() {
 		return (int) (Math.random() * NUMBER_RANGE);
 	}
 
@@ -27,7 +27,7 @@ public class Computer extends NumberRepository {
 	public Set<Integer> save() {
 		Set<Integer> set = new HashSet<>();
 		while (set.size() < REPOSITORYSIZE) {
-			set.add(insert()());
+			set.add(insert());
 		}
 		return set;
 	}
