@@ -59,15 +59,18 @@
 
   <ul>
      <li>
-              interface : NumberRepository 
+                  class : NumberRepository 
+           -> abstract 
                  method : insert
-              -> method : save     
+               , method : save     
      </li>
       <li>
-                  class : computer implement NumberRepository
+                  class : Computer extends NumberRepository
+                  -> method : insert
       </li>
       <li>
-                  class : User implement NumberRepository
+                  class : User extends NumberRepository
+                  -> method : insert
       </li>
       
   </ul>
