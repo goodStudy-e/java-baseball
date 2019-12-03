@@ -58,15 +58,17 @@
 
 
   <ul>
+     <li>
+                  class : NumberRepository 
+              -> method : save     
+     </li>
       <li>
-                  class : computer 
+                  class : computer extends NumberRepository
               -> method : insertRandomNumber
-              -> method : numberSet(int number)  
       </li>
       <li>
-                  class : User 
+                  class : User extends NumberRepository
               -> method : insertNumber
-              -> method : numberSet(int number)  
       </li>
       
   </ul>
