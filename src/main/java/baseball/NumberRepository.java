@@ -18,15 +18,11 @@ import java.util.Set;
 
 public class NumberRepository {
 
-	private static final int REPOSITORYSIZE = 3;
+	protected static final int REPOSITORYSIZE = 3;
 	
 	
-	public Set<Integer> save(int number) {
+	public Set<Integer> save() {
 		Set<Integer> set = new HashSet<>();
-		
-		while (set.size() < REPOSITORYSIZE) {
-			set.add(number);
-		}
 		return set;
 	}
 	
