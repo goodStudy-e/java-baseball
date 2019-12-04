@@ -63,12 +63,16 @@ public class Game {
 			increaseBall(index, playerIndex);
 		}
 	}
-
+	
+	// 인덱스 비교
+	private boolean compare(int com, int player) {
+		return com == player;
+	}
 
 
 	// 볼 갯수 증가
-	private void increaseBall(int index, int playerIndex) {
-		if (index != playerIndex ) {
+	private void increaseBall(int com, int player) {
+		if (!compare(com,player)) {
 			ball++;
 		}
 	}
@@ -76,8 +80,8 @@ public class Game {
 
 
 	// 스트라이크 갯수 증가
-	private void increaseStrike(int index, int playerIndex) {
-		if ( index == playerIndex) {
+	private void increaseStrike(int com, int player) {
+		if (compare(com, player)) {
 			strike++;
 		}
 	}

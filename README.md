@@ -80,7 +80,8 @@
                 -> method : toList,play,
                                   -> subMethod : computerCompareToPlayer , increaseCount , increaseBall ,                        increaseStrike
                -> method : outCondition,homerunCondition
-                                  -> subMethod : result                   
+                                  -> subMethod : result      
+               ->  metthod : compare                               
     </li>
       
   </ul>
