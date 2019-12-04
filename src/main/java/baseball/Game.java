@@ -23,6 +23,10 @@ public class Game {
 	private int strike;
 	private int ball;
 	
+	private static final String HUMERUN = "HUMERUN!~";
+	private static final String OUT = "OUT TT";
+	private static final String STRIKE = "Strike: ";
+	private static final String BALL = "Ball: ";
 	
 	//set -> list로 바꾸는 메소드 
 	public List<Integer> toList(Set<Integer> set) {
@@ -78,6 +82,22 @@ public class Game {
 		}
 	}
 	
+	// 아웃일때	
+	private boolean outCondition() {
+		return  getBall()  == 0 && getStrike() == 0; 
+	}
+	
+	// 홈런일때
+	private boolean homerunCondition() {
+		return  getStrike() == 3; 
+	}
+	
+	// 결과 표시
+	public String result() {
+		return homerunCondition() ? HUMERUN 
+			  : (outCondition() ? OUT 
+			  : STRIKE + getStrike() + " , " +BALL + getBall());	
+	}
 	
 	public int getStrike() {
 		return strike;
