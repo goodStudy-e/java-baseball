@@ -77,8 +77,10 @@
       <li>
                 class : Game
                 -> varialbe : strike (get), ball (get)
-                -> method : toList,play, 
+                -> method : toList,play,
                                   -> subMethod : computerCompareToPlayer , increaseCount , increaseBall ,                        increaseStrike
+               -> method : outCondition,homerunCondition
+                                  -> subMethod : result                   
     </li>
       
   </ul>
