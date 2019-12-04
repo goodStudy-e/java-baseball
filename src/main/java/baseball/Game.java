@@ -1,5 +1,9 @@
 package baseball;
 
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+>>>>>>> aa66ac092494bd809ceee46f6ca42f6409922016
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -19,6 +23,7 @@ import java.util.Set;
 
 public class Game {
 	
+<<<<<<< HEAD
 	private int strike;
 	private int ball;
 	
@@ -85,4 +90,7 @@ public class Game {
 	public int getBall() {
 		return ball;
 	}
+=======
+
+>>>>>>> aa66ac092494bd809ceee46f6ca42f6409922016
 }
