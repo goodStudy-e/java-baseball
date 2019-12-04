@@ -99,11 +99,11 @@ public class Game {
 			  : STRIKE + getStrike() + " , " +BALL + getBall());	
 	}
 	
-	public int getStrike() {
+	private int getStrike() {
 		return strike;
 	}
 	
-	public int getBall() {
+	private int getBall() {
 		return ball;
 	}
 
