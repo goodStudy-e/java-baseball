@@ -79,7 +79,6 @@
                 -> varialbe : strike (get), ball (get)
                 -> method : toList,play, 
                                   -> subMethod : computerCompareToPlayer , increaseCount , increaseBall ,                        increaseStrike
-                                  
-      </li>
+    </li>
       
   </ul>
