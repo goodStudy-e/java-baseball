@@ -1,6 +1,7 @@
 package baseball;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -41,7 +42,7 @@ public abstract class NumberRepository {
 	
 	// 숫자 저장
 	public Set<Integer> save() {
-		Set<Integer> set = new HashSet<>();
+		Set<Integer> set = new LinkedHashSet<>();
 		while (set.size() < REPOSITORYSIZE) {
 			int num = insert();
 			rangeTrue(set, num);
