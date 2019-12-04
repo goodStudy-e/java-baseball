@@ -1,4 +1,4 @@
-프리코스 1주차 미션 (숫자야구게임)
+# 프리코스 1주차 미션 (숫자야구게임)
 
 ## 1. 요구사항
 
@@ -18,12 +18,14 @@
 
 ## 3. History
 1. **19.12.03 (화)**
-        - Markdown 사용법 숙지 및 README.md 파일 수정
-        - 숫자 야구 게임 기능 구현 목록 작성
-        - 자바 코드 컨벤션 학습 및 숙지
+- Markdown 사용법 숙지 및 README.md 파일 수정<br>
+- 숫자 야구 게임 기능 구현 목록 작성<br>
+- 자바 코드 컨벤션 학습 및 숙지<br>
 
-2. **19.12.04 (수)**
-        - README.md 필요한 기능 세부항목 구분
-        - 기능1 구현: NumberGenerator 클래
-        - 기능2 구현: InputNumber 클래스
-        - 대략적인 숫자야구게임 시스템 구성: BaseballSystem 클래스
+-----
+
+2. **19.12.04 (수)**<br>
+- README.md 필요한 기능 세부항목 구분<br>
+- 기능1 구현: NumberGenerator 클래<br>
+- 기능2 구현: InputNumber 클래스<br>
+- 대략적인 숫자야구게임 시스템 구성: BaseballSystem 클래스<br>
