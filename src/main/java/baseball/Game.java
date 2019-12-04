@@ -40,27 +40,27 @@ public class Game {
 	// 숫자 야구게임 실행
 	public void play(List<Integer> com, List<Integer> player) {
 		
-		for (int index = 0; index < com.size(); index++) {            
-			computerCompareToPlayer(com, player, index);
+		for (int i = 0; i < com.size(); i++) {            
+			computerCompareToPlayer(com, player, i);
 		}
 
 		
 	}
 
 	// 컴퓨터와 플레이어 비교
-	private void computerCompareToPlayer(List<Integer> com, List<Integer> player, int index) {
-		for (int j = 0; j < player.size(); j++) {     
-			increaseCount(com, player, index, j);
+	private void computerCompareToPlayer(List<Integer> comList, List<Integer> playerList, int player) {
+		for (int i = 0; i < playerList.size(); i++) {     
+			increaseCount(comList, playerList, player, i);
 				
 		}
 	}
 
 
 	// 스트라이크, 볼 증가
-	private void increaseCount(List<Integer> com, List<Integer> player, int index, int playerIndex) {
-		if(com.get(index) == player.get(playerIndex)) {
-			increaseStrike(index, playerIndex);
-			increaseBall(index, playerIndex);
+	private void increaseCount(List<Integer> comList, List<Integer> playerList, int com, int player) {
+		if(comList.get(com) == playerList.get(player)) {
+			increaseStrike(com, player);
+			increaseBall(com, player);
 		}
 	}
 	
@@ -76,7 +76,6 @@ public class Game {
 			ball++;
 		}
 	}
-
 
 
 	// 스트라이크 갯수 증가
