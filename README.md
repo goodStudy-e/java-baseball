@@ -73,6 +73,13 @@
       <li>
                   class : User extends NumberRepository
                   -> method : insert
+      </li>  
+      <li>
+                class : Game
+                -> varialbe : strike (get), ball (get)
+                -> method : toList,play, 
+                                  -> subMethod : computerCompareToPlayer , increaseCount , increaseBall ,                        increaseStrike
+                                  
       </li>
       
   </ul>
