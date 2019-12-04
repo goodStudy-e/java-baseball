@@ -87,19 +87,21 @@ public class Game {
 	
 	// 아웃일때	
 	private boolean outCondition() {
-		return  getBall()  == 0 && getStrike() == 0; 
+		int zero = 0;
+		return  !(getBall()  == zero && getStrike() == zero); 
 	}
 	
 	// 홈런일때
 	private boolean homerunCondition() {
-		return  getStrike() == 3; 
+		int three = 3;
+		return  getStrike() == three; 
 	}
 	
 	// 결과 표시
 	public String result() {
 		return homerunCondition() ? HUMERUN 
-			  : (outCondition() ? OUT 
-			  : STRIKE + getStrike() + " , " +BALL + getBall());	
+			  : (outCondition() ? STRIKE + getStrike() + " , " +BALL + getBall() 
+			  :  OUT);	
 	}
 	
 	private int getStrike() {
