@@ -81,7 +81,11 @@
                                   -> subMethod : computerCompareToPlayer , increaseCount , increaseBall ,                        increaseStrike
                -> method : outCondition,homerunCondition
                                   -> subMethod : result      
-               ->  method : compare,intailize(초기)                               
+               ->  method : compare,intailize(초기화)                               
     </li>
+     <li>
+         class : play
+           -> method : main
+     </li>
       
   </ul>
