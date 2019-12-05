@@ -38,7 +38,7 @@ public class Game {
 	
 	
 	// 숫자 야구게임 실행
-	public void play(List<Integer> com, List<Integer> player) {
+	public void play(List<Integer> com, List<Integer> player ) {
 		
 		for (int i = 0; i < com.size(); i++) {            
 			computerCompareToPlayer(com, player, i);
@@ -61,6 +61,7 @@ public class Game {
 		if(comList.get(com) == playerList.get(player)) {
 			increaseStrike(com, player);
 			increaseBall(com, player);
+			
 		}
 	}
 	
@@ -86,22 +87,29 @@ public class Game {
 	}
 	
 	// 아웃일때	
-	private boolean outCondition() {
+	private boolean isNotOut() {
 		int zero = 0;
 		return  !(getBall()  == zero && getStrike() == zero); 
 	}
 	
 	// 홈런일때
-	private boolean homerunCondition() {
+	public boolean isHomerun() {
 		int three = 3;
 		return  getStrike() == three; 
 	}
 	
+	
 	// 결과 표시
 	public String result() {
-		return homerunCondition() ? HUMERUN 
-			  : (outCondition() ? STRIKE + getStrike() + " , " +BALL + getBall() 
-			  :  OUT);	
+		return isHomerun() ? HUMERUN 
+			  : (isNotOut() ? STRIKE + getStrike() + " , " +BALL + getBall() 
+			  :  OUT);
+	}
+	
+	// 볼 , 스트라이크 초기화
+	public void intailize() {
+		this.strike = 0;
+		this.ball = 0;
 	}
 	
 	private int getStrike() {

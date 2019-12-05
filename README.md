@@ -81,7 +81,7 @@
                                   -> subMethod : computerCompareToPlayer , increaseCount , increaseBall ,                        increaseStrike
                -> method : outCondition,homerunCondition
                                   -> subMethod : result      
-               ->  metthod : compare                               
+               ->  method : compare,intailize(√ ±‚)                               
     </li>
       
   </ul>
