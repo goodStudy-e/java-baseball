@@ -14,7 +14,7 @@ package baseball;
  */
 public class Computer extends NumberRepository {
 
-	private static final int NUMBER_RANGE = 9;
+	private static final int NUMBER_RANGE = 10;
 
 	@Override
 	public int insert() {
