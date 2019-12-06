@@ -28,8 +28,8 @@ public class Play {
 		// 컴퓨터는 숫자를 고릅니다.
 		Computer computer = new Computer();
 		
-		Set<Integer> com = computer.save();
-		List<Integer> list = game.toList(com);
+		Set<Integer> comSet = computer.save();
+		List<Integer> comList = game.toList(comSet);
 
 		System.out.println("컴퓨터는 숫자를 3개의 숫자를 골랐습니다.");
 		
@@ -41,15 +41,17 @@ public class Play {
 		
 		System.out.println("몇 번안에 마추겠습니까? ");
 		int type = sc.nextInt();
+		Set<Integer> userSet = null;
 		
 		for (int i = 0; i < type; i++) {
 			
+			
 			// 플레이어는 지정한 횟수 만큼 정답을 맞출 수 있습니다. 
-			Set<Integer> userSet = user.save();
+			 userSet = user.save();
 			List<Integer> userList = game.toList(userSet);
 			
 			// 게임을 시작합니다.
-			game.play(list, userList);
+			game.play(comList, userList);
 			
 			// 결과를 표시합니다.
 			System.out.println(game.result());
@@ -63,6 +65,10 @@ public class Play {
 			// 초기화
 			game.intailize();
 			
+		}
+		
+		if (!userSet.equals(comSet)) {
+			System.out.println("정답 : "+comSet);			
 		}
 
 	}
