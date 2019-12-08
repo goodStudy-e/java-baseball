@@ -42,7 +42,6 @@ public class NumberGenerator {
 
             if (!list.contains(randomNum)) {
                 list.add(randomNum);
-                System.out.println(randomNum);
             }
         }
 
