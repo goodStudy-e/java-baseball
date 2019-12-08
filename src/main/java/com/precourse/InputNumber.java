@@ -13,23 +13,26 @@ import java.util.Scanner;
  * 클래스 이름: InputNumber.java
  * 기능2) 사용자로부터 3개의 숫자를 입력받는다.
  * (제약조건: 서로 다른 숫자가 아닌경우 다시 숫자를 입력받는다.)
+ *
+ * @author rok, github.com/rok93
+ * <p>
+ * 날짜: 2019.12.04 (수)
+ * @version 1.0.0
  */
 public class InputNumber {
     private static int INPUT_LENGTH = 3;
-    public static ArrayList<Integer> insertList = new ArrayList<>();
 
     /**
      * 유저로부터 숫자를 입력받는 메서드
-     *
      * @return
      */
-    public ArrayList<Integer> insertNumber() {
+    public static ArrayList<Integer> insertNumber() {
         Scanner input = new Scanner(System.in);
         String inputNumber;
 
         do {
             System.out.print("숫자를 입력해주세요: ");
-            inputNumber = input.nextLine();
+            inputNumber = input.next();
         } while (isaRightInput(inputNumber));
 
         ArrayList<Integer> list = new ArrayList<>();
@@ -40,11 +43,11 @@ public class InputNumber {
 
     /**
      * 유로부터 받은 input(String)을 ArrayList 타입으로 캐스트하는 메서드
-     *
      * @param inputNumber
      * @param list
      */
-    public void inputToList(String inputNumber, ArrayList<Integer> list) {
+    public static void inputToList(String inputNumber,
+            ArrayList<Integer> list) {
         for (int i = 0; i < inputNumber.length(); i++) {
             list.add(Integer.parseInt(inputNumber.split("")[i]));
         }
@@ -57,7 +60,7 @@ public class InputNumber {
      * @param inputNumber
      * @return
      */
-    public boolean isaRightInput(String inputNumber) {
+    public static boolean isaRightInput(String inputNumber) {
         if (inputNumber.length() != INPUT_LENGTH) {
             System.out.println("3자리 수를 입력해주세요!");
             return true;
@@ -73,16 +76,13 @@ public class InputNumber {
 
     /**
      * 리스트에 중복되는 값이 있는지 확인하는 메서드
-     *
      * @param inputNumber
      * @return
      */
-    public boolean isOverlap(String inputNumber) {
-        boolean check = Arrays.stream(inputNumber.split(""))
+    public static boolean isOverlap(String inputNumber) {
+        return Arrays.stream(inputNumber.split(""))
                 .distinct()
                 .count() != inputNumber.length();
-
-        return check;
     }
 
 }
