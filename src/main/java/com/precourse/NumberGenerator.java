@@ -23,10 +23,10 @@ public class NumberGenerator {
 
     /**
      * 정답으로 설정할 숫자 리스트 생성하는 메서드
-     *
      * @return
      */
     public static ArrayList<Integer> numberGenerator() {
+        System.out.println("컴퓨터가 문제를 생성합니다.");
         answerList = getAnswerList(RANGE_OF_NUMBER);
         return answerList;
     }
@@ -37,11 +37,12 @@ public class NumberGenerator {
     public static ArrayList<Integer> getAnswerList(int length) {
         ArrayList<Integer> list = new ArrayList<>();
 
-        while (listSmallerLength(length, list)) {
-            int randomNum = getRandomNum(length + 1);        // 0 ~ 9 까지 난수 발생
+        while (listSmallerLength(ANSWER_LENGTH, list)) {
+            int randomNum = getRandomNum(length + 1);        // 0 ~ length 까지 난수 발생
 
             if (!list.contains(randomNum)) {
                 list.add(randomNum);
+                System.out.println(randomNum);
             }
         }
 
@@ -55,7 +56,8 @@ public class NumberGenerator {
      * @param list
      * @return
      */
-    public static boolean listSmallerLength(int length, ArrayList<Integer> list) {
+    public static boolean listSmallerLength(int length,
+            ArrayList<Integer> list) {
         return list.size() < length;
     }
 
