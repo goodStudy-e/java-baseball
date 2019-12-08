@@ -8,6 +8,7 @@ package com.precourse;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.concurrent.Delayed;
 
 /**
  * 클래스 이름: InputNumber.java
@@ -31,8 +32,8 @@ public class InputNumber {
         String inputNumber;
 
         do {
-            System.out.print("숫자를 입력해주세요: ");
-            inputNumber = input.next();
+            System.out.println("숫자를 입력해주세요: ");
+            inputNumber = input.nextLine();
         } while (isaRightInput(inputNumber));
 
         ArrayList<Integer> list = new ArrayList<>();
