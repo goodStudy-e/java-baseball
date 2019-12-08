@@ -17,8 +17,8 @@ import java.util.ArrayList;
  * @version 1.0.0
  */
 public class ComparedResult {
-    private static int strike = 0;
-    private static int ball = 0;
+    private int strike = 0;
+    private int ball = 0;
     private static final int LENGTH = 3;
     private static boolean isRight = false;
 
