@@ -122,7 +122,6 @@ class Confirm {
         return confirmAll;
     }
 
-
     // out : 0, ball : 1, strike : 2
     private int confirm(String scanNum, String numbers, int index) {
         int confirm;
@@ -137,7 +136,6 @@ class Confirm {
         }
         return confirm;
     }
-
 
     private boolean isOut(String oneNum, String numbers) {
         boolean isOut = true;
