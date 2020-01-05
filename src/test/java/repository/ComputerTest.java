@@ -29,6 +29,5 @@ public class ComputerTest {
 	public void countTest() {
 
 		assertEquals(3, com.save().size());
-
 	}
 }
