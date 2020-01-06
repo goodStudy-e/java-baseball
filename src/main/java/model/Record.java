@@ -12,14 +12,21 @@ public class Record {
 		for (int i = 0; i < com.size(); i++) {
 
 			for (int j = 0; j < user.size(); j++) {
-
-				if (i == j && com.get(i) == user.get(j)) {
-					strike++;
-				}
-				if (i != j && com.get(i) == user.get(j)) {
-					ball++;
-				}
+				strikeUp(com, user, i, j);
+				ballUp(com, user, i, j);
 			}
+		}
+	}
+
+	private void ballUp(List<Integer> com, List<Integer> user, int i, int j) {
+		if (i != j && com.get(i) == user.get(j)) {
+			ball++;
+		}
+	}
+
+	private void strikeUp(List<Integer> com, List<Integer> user, int i, int j) {
+		if (i == j && com.get(i) == user.get(j)) {
+			strike++;
 		}
 	}
 	

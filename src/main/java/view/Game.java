@@ -10,11 +10,12 @@ import repository.User;
 import util.DataBoxing;
 
 public class Game {
-	public static void main(String[] args) {
+	
+	public void generate() {
 		Scanner sc = new  Scanner(System.in);
-		
 		Computer computer = new Computer();
 		List<Integer> comSelect = DataBoxing.toList(computer.save());
+		System.out.println("안녕하세요. 야구 게임입니다. 숫자는 스페이스(공백)으로 구분됩니다.");
 		System.out.print("몇 번안에 맞추시겠습니까?: ");
 		int t = sc.nextInt();
 		User user = new User(sc);
@@ -30,6 +31,6 @@ public class Game {
 			}
 			record.intialize();
 		}
-		
 	}
+	
 }
