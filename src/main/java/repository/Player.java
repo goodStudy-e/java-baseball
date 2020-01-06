@@ -3,21 +3,27 @@ package repository;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import util.Construct;
+
 public abstract class Player {
 
-	public boolean range(int number) {
-		return -1 < number && number < 10;
+
+	private static final int MIN_RANGE = -1;
+	private boolean range(int number) {
+		return MIN_RANGE < number && number < Construct.MAX_RANGE;
 	}
 
-	public abstract int generate();
+	protected abstract int generate();
 
 	public Set<Integer> save() {
 		Set<Integer> callNumbers = new LinkedHashSet<>();
 
-		while (callNumbers.size() != 3) {
+		while (callNumbers.size() != Construct.MAX_COUNT) {
 			int number = generate();
 			if (range(number)) {
+
 				callNumbers.add(number);
+
 			}
 
 		}
