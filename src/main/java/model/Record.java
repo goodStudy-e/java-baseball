@@ -1,4 +1,4 @@
-package view;
+package model;
 
 import java.util.List;
 
@@ -16,11 +16,16 @@ public class Record {
 				if (i == j && com.get(i) == user.get(j)) {
 					strike++;
 				}
-				if (com.get(i) == user.get(j)) {
+				if (i != j && com.get(i) == user.get(j)) {
 					ball++;
 				}
 			}
 		}
+	}
+	
+	public void intialize() {
+		this.ball = 0;
+		this.strike = 0;
 	}
 	
 	public int getBall() {

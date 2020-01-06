@@ -7,6 +7,7 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
+import model.Record;
 import repository.Computer;
 import repository.User;
 import util.DataBoxing;

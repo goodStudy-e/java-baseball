@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class DataBoxing {
 	
-	public List<Integer> toList(Set<Integer> set) {
+	public static List<Integer> toList(Set<Integer> set) {
 		return new ArrayList<Integer>(set);
 	}
 
