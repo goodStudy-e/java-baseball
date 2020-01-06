@@ -21,7 +21,6 @@ public class Game {
 		Record record = new Record();
 		Result result = new Result();
 		for (int i = 0; i < t; i++) {
-			System.out.println(comSelect);
 			record.compare(comSelect,DataBoxing.toList(user.save()));
 			System.out.println(result.answer(record));
 			
