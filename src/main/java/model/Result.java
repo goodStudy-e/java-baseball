@@ -15,11 +15,11 @@ public class Result {
 
 		state = record.getStrike() + INITIALS_S + record.getBall() + INITIALS_B;
 		if (record.getStrike() == Construct.MAX_COUNT) {
-			return state = Tell.HUMRUN;
+			state = Tell.HUMRUN;
 		}
 
 		if (record.getBall() == DEFAULT_COUNT && record.getStrike() == DEFAULT_COUNT) {
-			return state = OUT;
+			state = OUT;
 		}
 
 		return state;
