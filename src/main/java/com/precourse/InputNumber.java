@@ -25,6 +25,7 @@ public class InputNumber {
 
     /**
      * 유저로부터 숫자를 입력받는 메서드
+     *
      * @return
      */
     public static ArrayList<Integer> insertNumber() {
@@ -44,11 +45,12 @@ public class InputNumber {
 
     /**
      * 유로부터 받은 input(String)을 ArrayList 타입으로 캐스트하는 메서드
+     *
      * @param inputNumber
      * @param list
      */
-    public static void inputToList(String inputNumber,
-            ArrayList<Integer> list) {
+    private static void inputToList(String inputNumber,
+                                    ArrayList<Integer> list) {
         for (int i = 0; i < inputNumber.length(); i++) {
             list.add(Integer.parseInt(inputNumber.split("")[i]));
         }
@@ -61,7 +63,7 @@ public class InputNumber {
      * @param inputNumber
      * @return
      */
-    public static boolean isaRightInput(String inputNumber) {
+    private static boolean isaRightInput(String inputNumber) {
         if (inputNumber.length() != INPUT_LENGTH) {
             System.out.println("3자리 수를 입력해주세요!");
             return true;
@@ -77,10 +79,11 @@ public class InputNumber {
 
     /**
      * 리스트에 중복되는 값이 있는지 확인하는 메서드
+     *
      * @param inputNumber
      * @return
      */
-    public static boolean isOverlap(String inputNumber) {
+    private static boolean isOverlap(String inputNumber) {
         return Arrays.stream(inputNumber.split(""))
                 .distinct()
                 .count() != inputNumber.length();

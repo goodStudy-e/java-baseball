@@ -23,6 +23,7 @@ public class NumberGenerator {
 
     /**
      * 정답으로 설정할 숫자 리스트 생성하는 메서드
+     *
      * @return
      */
     public static ArrayList<Integer> numberGenerator() {
@@ -55,8 +56,7 @@ public class NumberGenerator {
      * @param list
      * @return
      */
-    public static boolean listSmallerLength(int length,
-            ArrayList<Integer> list) {
+    public static boolean listSmallerLength(int length, ArrayList<Integer> list) {
         return list.size() < length;
     }
 
