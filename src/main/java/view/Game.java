@@ -30,7 +30,7 @@ public class Game {
 				System.out.println(Tell.WINNER);
 				return;
 			}
-			record.intialize();
+			record.crear();
 		}
 	}
 	

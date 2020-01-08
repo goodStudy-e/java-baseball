@@ -28,7 +28,7 @@ public class Record {
 		}
 	}
 
-	public void intialize() {
+	public void crear() {
 		this.ball = 0;
 		this.strike = 0;
 	}
