@@ -7,12 +7,12 @@ public class Result {
 
 	private static final String OUT = "OUT";
 	private static final int DEFAULT_COUNT = 0;
-	private static final String INITIALS_S = "S";
-	private static final String INITIALS_B = "B";
+	private static final String STRIKE = "STRIKE";
+	private static final String BALL = "BALL";
 	private String state;
 
 	public String answer(Record record) {
-		state = record.getStrike() + INITIALS_S + record.getBall() + INITIALS_B;
+		state = record.getStrike() + STRIKE + record.getBall() + BALL;
 		if (record.getStrike() == Construct.MAX_COUNT) {
 			state = Tell.HUMRUN;
 		}
