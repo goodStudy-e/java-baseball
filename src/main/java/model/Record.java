@@ -8,9 +8,7 @@ public class Record {
 	private int strike;
 
 	public void compare(List<Integer> com, List<Integer> user) {
-
 		for (int i = 0; i < com.size(); i++) {
-
 			for (int j = 0; j < user.size(); j++) {
 				strikeUp(com, user, i, j);
 				ballUp(com, user, i, j);
@@ -29,16 +27,16 @@ public class Record {
 			strike++;
 		}
 	}
-	
+
 	public void intialize() {
 		this.ball = 0;
 		this.strike = 0;
 	}
-	
+
 	public int getBall() {
 		return ball;
 	}
-	
+
 	public int getStrike() {
 		return strike;
 	}

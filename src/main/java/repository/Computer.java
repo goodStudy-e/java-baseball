@@ -8,6 +8,4 @@ public class Computer extends Player {
 		return (int) (Math.random() * Construct.MAX_RANGE);
 	}
 
-
-
 }

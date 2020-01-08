@@ -12,7 +12,6 @@ public class Result {
 	private String state;
 
 	public String answer(Record record) {
-
 		state = record.getStrike() + INITIALS_S + record.getBall() + INITIALS_B;
 		if (record.getStrike() == Construct.MAX_COUNT) {
 			state = Tell.HUMRUN;
