@@ -1,35 +1,43 @@
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class RandomNumber {
-    final int digit;
-    StringBuilder sb;
+    private final int digit;
 
-    public RandomNumber(int digit) throws Exception {
-        if (digit > 9) {
+    public RandomNumber(int digit) {
+        final int limitDigit = 9;
+        if (digit > limitDigit) {
             throw new DigitException();
         }
         this.digit = digit;
     }
 
     private int getRandomNumber() {
+        final int randomBound = 10;
         Random random = new Random();
-        int ranNum = random.nextInt(10);
+        int ranNum = random.nextInt(randomBound);
         return ranNum;
     }
 
-    private boolean isContain(String container, String content) {
-        return container.contains(content);
+    private String collectionToString(Collection collection) {
+        StringBuilder sb = new StringBuilder();
+        for (Object object : collection) {
+            sb.append(object);
+        }
+        return sb.toString();
     }
 
     public String getBaseBallNumber() {
-        sb = new StringBuilder();
-        while (sb.toString().length() < digit) {
-            String randomNum = Integer.toString(getRandomNumber());
-            if (!isContain(sb.toString(), randomNum)) {
-                sb.append(randomNum);
-            }
+        Set<String> baseBallNumbers = new LinkedHashSet<>();
+        int baseBallNumbersSize = 0;
+        while (baseBallNumbersSize < digit) {
+            baseBallNumbers.add(Integer.toString(getRandomNumber()));
+            baseBallNumbersSize = baseBallNumbers.size();
         }
-        return sb.toString();
+
+        return collectionToString(baseBallNumbers);
     }
 
 }

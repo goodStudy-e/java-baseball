@@ -1,10 +1,10 @@
 public class BaseBallGame {
-    final int chance;
-    final String randomNum;
+    private final int chance;
+    private final String randomNumber;
 
-    public BaseBallGame(int chance, String randomNum) {
+    public BaseBallGame(int chance, String randomNumber) {
         this.chance = chance;
-        this.randomNum = randomNum;
+        this.randomNumber = randomNumber;
     }
 
     public void run() {
@@ -14,7 +14,7 @@ public class BaseBallGame {
             if (!isNumber(response)) {
                 continue;
             }
-            if (!sameLength(response, randomNum)) {
+            if (!isSameLength(response, randomNumber)) {
                 continue;
             }
             if (confirm(response)) {
@@ -39,7 +39,7 @@ public class BaseBallGame {
         return isNumber;
     }
 
-    private boolean sameLength(String response, String randomNum) {
+    private boolean isSameLength(String response, String randomNum) {
         boolean sameLength = true;
         int digit = randomNum.length();
         if (response.length() != digit) {
@@ -50,34 +50,35 @@ public class BaseBallGame {
     }
 
     private boolean confirm(String response) {
-        boolean allStrike = false;
         int digit = response.length();
+        if (randomNumber.equals(response)) {
+            return true;
+        }
+
         int strike = 0;
         int ball = 0;
         int out = 0;
+
         for (int i = 0; i < digit; i++) {
             int index = getIndex(response.substring(i, i + 1));
             if (index == -1) {
                 out++;
                 continue;
             }
-            if (index != -1) {
-                if (index == i) {
-                    strike++;
-                    continue;
-                }
-                ball++;
+            if (index == i) {
+                strike++;
                 continue;
             }
+            ball++;
         }
+
         showResult(strike, ball, out);
-        if (strike == digit)
-            allStrike = true;
-        return allStrike;
+
+        return false;
     }
 
     private int getIndex(String number) {
-        return randomNum.indexOf(number);
+        return randomNumber.indexOf(number);
     }
 
     private void showResult(int strike, int ball, int out) {
