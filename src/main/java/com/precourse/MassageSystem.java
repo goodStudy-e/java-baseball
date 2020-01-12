@@ -1,14 +1,5 @@
 package com.precourse;
 
-/**
- * 클래스 이름: MassageSystem
- * 사용자가 입력한 숫자에따라 힌트또는 정답 메시지를 출력한다.
- *
- * @author rok, github.com/rok93
- * <p>
- * 날짜: 2019.12.04 (수)
- * @version 1.0.0
- */
 public class MassageSystem {
 
     /**

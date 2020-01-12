@@ -8,7 +8,6 @@ package com.precourse;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.concurrent.Delayed;
 
 /**
  * 클래스 이름: InputNumber.java
@@ -21,14 +20,14 @@ import java.util.concurrent.Delayed;
  * @version 1.0.0
  */
 public class InputNumber {
-    private static int INPUT_LENGTH = 3;
+    private final int INPUT_LENGTH = 3;
 
     /**
      * 유저로부터 숫자를 입력받는 메서드
      *
      * @return
      */
-    public static ArrayList<Integer> insertNumber() {
+    public ArrayList<Integer> insertNumber() {
         Scanner input = new Scanner(System.in);
         String inputNumber;
 
@@ -49,7 +48,7 @@ public class InputNumber {
      * @param inputNumber
      * @param list
      */
-    private static void inputToList(String inputNumber,
+    private void inputToList(String inputNumber,
                                     ArrayList<Integer> list) {
         for (int i = 0; i < inputNumber.length(); i++) {
             list.add(Integer.parseInt(inputNumber.split("")[i]));
@@ -63,7 +62,7 @@ public class InputNumber {
      * @param inputNumber
      * @return
      */
-    private static boolean isaRightInput(String inputNumber) {
+    private boolean isaRightInput(String inputNumber) {
         if (inputNumber.length() != INPUT_LENGTH) {
             System.out.println("3자리 수를 입력해주세요!");
             return true;
@@ -83,7 +82,7 @@ public class InputNumber {
      * @param inputNumber
      * @return
      */
-    private static boolean isOverlap(String inputNumber) {
+    private boolean isOverlap(String inputNumber) {
         return Arrays.stream(inputNumber.split(""))
                 .distinct()
                 .count() != inputNumber.length();

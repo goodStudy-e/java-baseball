@@ -19,8 +19,8 @@ import java.util.ArrayList;
 public class ComparedResult {
     private int strike = 0;
     private int ball = 0;
-    private static final int LENGTH = 3;
-    private static boolean isRight = false;
+    private final int LENGTH = 3;
+    private final int THREE_STRIKE = 3;
 
     /** 유저가 입력한 세자리 정수와 정답을 비교하는 메서드 */
     public boolean compareResult(ArrayList<Integer> answer,
@@ -31,7 +31,8 @@ public class ComparedResult {
             }
         }
 
-        if (strike == 3) {
+        boolean isRight = false;
+        if (strike == THREE_STRIKE) {
             isRight = true;
             MassageSystem.sendCollectMessage();
         } else {

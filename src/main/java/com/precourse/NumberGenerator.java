@@ -17,25 +17,24 @@ import java.util.ArrayList;
  * 날짜: 2019.12.04 (수)
  */
 public class NumberGenerator {
-    private static final int ANSWER_LENGTH = 3;        // 정답의 길이 3으로 고정
-    private static final int RANGE_OF_NUMBER = 9;
-    private static ArrayList<Integer> answerList = new ArrayList<>();
+    private final int ANSWER_LENGTH = 3;        // 정답의 길이 3으로 고정
+    private final int RANGE_OF_NUMBER = 9;
 
     /**
      * 정답으로 설정할 숫자 리스트 생성하는 메서드
      *
      * @return
      */
-    public static ArrayList<Integer> numberGenerator() {
+    public ArrayList<Integer> numberGenerator() {
         System.out.println("컴퓨터가 문제를 생성합니다.");
-        answerList = getAnswerList(RANGE_OF_NUMBER);
+        ArrayList<Integer> answerList = getAnswerList(RANGE_OF_NUMBER);
         return answerList;
     }
 
     /**
      * 중복되지 않는 서로 다른 3개의 수를 생성하는 메서드
      */
-    public static ArrayList<Integer> getAnswerList(int length) {
+    public ArrayList<Integer> getAnswerList(int length) {
         ArrayList<Integer> list = new ArrayList<>();
 
         while (listSmallerLength(ANSWER_LENGTH, list)) {
@@ -56,7 +55,7 @@ public class NumberGenerator {
      * @param list
      * @return
      */
-    public static boolean listSmallerLength(int length, ArrayList<Integer> list) {
+    public boolean listSmallerLength(int length, ArrayList<Integer> list) {
         return list.size() < length;
     }
 
@@ -66,7 +65,7 @@ public class NumberGenerator {
      * @param range
      * @return
      */
-    public static int getRandomNum(int range) {
+    public int getRandomNum(int range) {
         return (int) (Math.random() * range);
     }
 
