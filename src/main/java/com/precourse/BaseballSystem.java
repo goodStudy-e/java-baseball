@@ -18,5 +18,4 @@ public class BaseballSystem {
             incorrect = comparedResult.compareResult(answer, insert, tryNumber);
         }
     }
-
 }
