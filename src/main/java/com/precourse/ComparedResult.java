@@ -28,10 +28,6 @@ public class ComparedResult {
         return !isRight;
     }
 
-    private boolean isContains(ArrayList<Integer> answer, int part_input) {
-        return answer.contains(part_input);
-    }
-
     private void checkDigit(int a, int b) {
         if (a == b) {
             strike++;
