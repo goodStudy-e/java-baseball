@@ -11,7 +11,7 @@ public class ComparedResult {
     public boolean compareResult(ArrayList<Integer> answer,
                                  ArrayList<Integer> input, int tryNumber) {
         for (int i = 0; i < LENGTH; i++) {
-            if (isContains(answer, input.get(i))) {
+            if (answer.contains(input.get(i))) {
                 checkDigit(answer.get(i), input.get(i));
             }
         }

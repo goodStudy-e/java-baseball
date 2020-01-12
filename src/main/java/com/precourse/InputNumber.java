@@ -16,16 +16,14 @@ public class InputNumber {
             inputNumber = input.nextLine();
         } while (!isaRightInput(inputNumber));
 
-        ArrayList<Integer> list = new ArrayList<>();
-        SpringToList(inputNumber, list);
-
-        return list;
+        return InputNumberToList(inputNumber, new ArrayList<>());
     }
 
-    private void SpringToList(String inputNumber, ArrayList<Integer> list) {
+    private ArrayList<Integer> InputNumberToList(String inputNumber, ArrayList<Integer> list) {
         for (int i = 0; i < inputNumber.length(); i++) {
             list.add(Integer.parseInt(inputNumber.split("")[i]));
         }
+        return list;
     }
 
     private boolean isaRightInput(String inputNumber) {

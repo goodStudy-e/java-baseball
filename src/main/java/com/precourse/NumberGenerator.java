@@ -15,22 +15,17 @@ public class NumberGenerator {
     public ArrayList<Integer> getAnswerList(int length) {
         ArrayList<Integer> list = new ArrayList<>();
 
-        while (isSmallerAnswerLength(list)) {
-            int randomNum = getRandomNum(length + 1);        // 0 ~ length 까지 난수 발생
+        while (list.size() < ANSWER_LENGTH) {
+            int randomNumber = getRandomNumber(length + 1);
 
-            if (!list.contains(randomNum)) {
-                list.add(randomNum);
+            if (!list.contains(randomNumber)) {
+                list.add(randomNumber);
             }
         }
-
         return list;
     }
 
-    public boolean isSmallerAnswerLength(ArrayList<Integer> list) {
-        return list.size() < ANSWER_LENGTH;
-    }
-
-    public int getRandomNum(int range) {
+    public int getRandomNumber(int range) {
         return (int) (Math.random() * range);
     }
 }
