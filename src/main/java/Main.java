@@ -8,7 +8,7 @@ public class Main {
                 BaseBallGame baseBallGame = new BaseBallGame(CHANCE, randomNumber.getBaseBallNumber());
                 baseBallGame.run();
                 break;
-            } catch (DigitException e) {
+            } catch (OverDigitException e) {
                 System.out.println(e.getMessage());
                 continue;
             } catch (NumberFormatException e){

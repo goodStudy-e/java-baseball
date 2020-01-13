@@ -9,7 +9,7 @@ public class RandomNumber {
     public RandomNumber(int digit) {
         final int limitDigit = 9;
         if (digit > limitDigit) {
-            throw new DigitException();
+            throw new OverDigitException();
         }
         this.digit = digit;
     }
@@ -21,7 +21,7 @@ public class RandomNumber {
         return ranNum;
     }
 
-    private String collectionToString(Collection collection) {
+    public String collectionToString(Collection collection) {
         StringBuilder sb = new StringBuilder();
         for (Object object : collection) {
             sb.append(object);

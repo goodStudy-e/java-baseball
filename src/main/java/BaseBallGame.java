@@ -28,7 +28,7 @@ public class BaseBallGame {
         }
     }
 
-    private boolean isNumber(String response) {
+    public boolean isNumber(String response) {
         boolean isNumber = true;
         try {
             Integer.parseInt(response);
@@ -39,7 +39,7 @@ public class BaseBallGame {
         return isNumber;
     }
 
-    private boolean isSameLength(String response, String randomNum) {
+    public boolean isSameLength(String response, String randomNum) {
         boolean sameLength = true;
         int digit = randomNum.length();
         if (response.length() != digit) {
@@ -49,7 +49,7 @@ public class BaseBallGame {
         return sameLength;
     }
 
-    private boolean confirm(String response) {
+    public boolean confirm(String response) {
         int digit = response.length();
         if (randomNumber.equals(response)) {
             return true;
@@ -77,7 +77,7 @@ public class BaseBallGame {
         return false;
     }
 
-    private int getIndex(String number) {
+    public int getIndex(String number) {
         return randomNumber.indexOf(number);
     }
 
