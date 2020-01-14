@@ -1,11 +1,11 @@
 package repository;
 
-import static repository.Player.MAX_RANGE;
+import java.util.Random;
 
-public class Computer extends Player {
+public class Computer implements NumberRepository {
 
 	public int generate() {
-		return (int) ((Math.random()) * (MAX_RANGE));
+		return  new Random().nextInt(MAX_RANGE);
 	}
 
 }

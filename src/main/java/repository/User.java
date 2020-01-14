@@ -2,7 +2,7 @@ package repository;
 
 import java.util.Scanner;
 
-public class User extends Player {
+public class User implements NumberRepository {
 
 	private Scanner sc;
 
@@ -10,6 +10,7 @@ public class User extends Player {
 		this.sc = sc;
 	}
 
+	@Override
 	public int generate() {
 		int number = sc.nextInt();
 		return number;

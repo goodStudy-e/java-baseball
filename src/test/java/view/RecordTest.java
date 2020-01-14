@@ -22,10 +22,10 @@ public class RecordTest {
 		Scanner sc = new Scanner(System.in);
 		User user = new User(sc);
 		Set<Integer> userSet = user.save();
-		
+
 		Record game = new Record();
 		game.compare(new DataBoxing().toList(comSet), new DataBoxing().toList(userSet));
-		
+
 		assertEquals(3, game.getBall());
 	}
 }

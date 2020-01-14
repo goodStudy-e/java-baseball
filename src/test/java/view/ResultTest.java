@@ -23,14 +23,14 @@ public class ResultTest {
 		Scanner sc = new Scanner(System.in);
 		User user = new User(sc);
 		Set<Integer> userSet = user.save();
-		
+
 		Record record = new Record();
 		record.compare(new DataBoxing().toList(comSet), new DataBoxing().toList(userSet));
 
 		Result result = new Result();
-		
+
 		System.out.println(result.answer(record));
-		assertEquals(1+"S"+2+"B", result.answer(record));
-		
+		assertEquals(1 + "S" + 2 + "B", result.answer(record));
+
 	}
 }

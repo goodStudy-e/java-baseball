@@ -4,31 +4,36 @@ import java.util.List;
 
 public class Record {
 
+	private final static int BASEBALL_COUNT = 3;
 	private int ball;
 	private int strike;
+	private boolean isStrike;
 
 	public void compare(List<Integer> com, List<Integer> user) {
-		for (int i = 0; i < com.size(); i++) {
-			for (int j = 0; j < user.size(); j++) {
-				strikeUp(com, user, i, j);
-				ballUp(com, user, i, j);
+		for (int i = 0; i < BASEBALL_COUNT; i++) {
+			isStrike = true;
+			strikeUp(com, user, i);
+			ballUp(com, user, i);
+		}
+
+	}
+
+	private void strikeUp(List<Integer> com, List<Integer> user, int index) {
+		if (com.get(index) == user.get(index)) {
+			strike++;
+			isStrike = false;
+		}
+	}
+
+	private void ballUp(List<Integer> com, List<Integer> user, int index) {
+		for (int j = 0; j < BASEBALL_COUNT; j++) {
+			if (com.get(index) == user.get(j) && isStrike) {
+				ball++;
 			}
 		}
 	}
 
-	private void ballUp(List<Integer> com, List<Integer> user, int i, int j) {
-		if (i != j && com.get(i) == user.get(j)) {
-			ball++;
-		}
-	}
-
-	private void strikeUp(List<Integer> com, List<Integer> user, int i, int j) {
-		if (i == j && com.get(i) == user.get(j)) {
-			strike++;
-		}
-	}
-
-	public void crear() {
+	public void clear() {
 		this.ball = 0;
 		this.strike = 0;
 	}

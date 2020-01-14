@@ -8,30 +8,40 @@ import model.Result;
 import repository.Computer;
 import repository.User;
 import util.DataBoxing;
-import util.Tell;
+import util.Talk;
 
 public class Game {
-	
-	public void generate() {
-		Scanner sc = new  Scanner(System.in);
+	private static final int HUMRUN = 3;
+
+	private List<Integer> settingComputer() {
 		Computer computer = new Computer();
 		List<Integer> comSelect = DataBoxing.toList(computer.save());
-		System.out.println(Tell.GREET);
-		System.out.print(Tell.HOW_COUNT);
-		int t = sc.nextInt();
-		User user = new User(sc);
-		Record record = new Record();
-		Result result = new Result();
-		for (int i = 0; i < t; i++) {
-			record.compare(comSelect,DataBoxing.toList(user.save()));
+		System.out.println(comSelect);
+		System.out.println(Talk.GREET);
+		return comSelect;
+	}
+
+	private int settingCount(Scanner sc) {
+		System.out.print(Talk.HOW_COUNT);
+		return sc.nextInt();
+	}
+
+	public void start() {
+		Scanner sc = new Scanner(System.in);
+		printResult(settingComputer(), settingCount(sc), new User(sc), new Record(), new Result());
+	}
+
+	private void printResult(List<Integer> comSelect, int time, User user, Record record, Result result) {
+		for (int i = 0; i < time; i++) {
+			record.compare(comSelect, DataBoxing.toList(user.save()));
 			System.out.println(result.answer(record));
-			
-			if (result.getState().equals(Tell.HUMRUN)) {
-				System.out.println(Tell.WINNER);
+
+			if (record.getStrike() == HUMRUN) {
+				System.out.println(Talk.WINNER);
 				return;
 			}
-			record.crear();
+			record.clear();
 		}
 	}
-	
+
 }
